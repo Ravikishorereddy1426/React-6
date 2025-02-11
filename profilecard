@@ -1,0 +1,105 @@
+//.js
+import React from "react";
+import "./ProfileCard.css"; // Ensure this CSS file exists
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={name} className="profile-image" />
+      <h2 className="profile-name">{name}</h2>
+      <p className="profile-greeting">{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
+
+//.css
+
+.profile-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .profile-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .profile-greeting {
+    font-size: 14px;
+    color: gray;
+  }
+  //..js
+  import React from "react";
+import "./ProfileCard.css"; // Ensure this CSS file exists
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={name} className="profile-image" />
+      <h2 className="profile-name">{name}</h2>
+      <p className="profile-greeting">{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
+
+//.app.css
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.profile-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.profile-greeting {
+  color: #555;
+  font-size: 14px;
+}
