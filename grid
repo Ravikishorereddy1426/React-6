@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Chrome Themed Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        
+        .parent {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 15% 70% 15%;
+            grid-template-columns: 15% 70% 15%;
+            grid-template-areas: 
+                "header header header"
+                "aside main rightmenu"
+                "footer footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #FFC107; /* Yellow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .aside {
+            grid-area: aside;
+            background-color: #34A853; /* Green */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: #EA4335; /* Red */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .main img {
+            width: 150px; /* Adjust size as needed */
+            height: 150px;
+        }
+
+        .rightmenu {
+            grid-area: rightmenu;
+            background-color: #4285F4; /* Blue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #F0F0F0; /* Light Gray */
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="header">Google Chrome - Header</div>
+        <div class="aside">Green - Aside</div>
+        <div class="main">
+            <p>Google Chrome Logo</p>
+            <img src="https://en.wikipedia.org/wiki/Google_Chrome" alt="Google Chrome Logo">
+        </div>
+        <div class="rightmenu">Blue - Right Menu</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
